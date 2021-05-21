@@ -7,7 +7,7 @@
       E clique no botao enviar
       Entao meu <cpf> sera exibido
 
-Exemplos:
-  | cpf           |
-  | "12345678910" |
-  | "15935741010" |
+    Exemplos:
+      | cpf           |
+      | "12345678910" |
+      | "15935741012" |

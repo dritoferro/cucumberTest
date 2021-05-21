@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.5.0"
+    id("se.thinkcode.cucumber-runner") version "0.0.9"
 }
 
 group = "br.com.tagliaferrodev"
@@ -10,6 +11,13 @@ repositories {
 }
 
 val cucumberVersion by extra { "6.10.4" }
+
+cucumber {
+    main = "io.cucumber.core.cli.Main"
+    glue = "classpath:br.com.tagliaferrodev"
+    featurePath = "src/test/resources"
+    plugin = arrayOf("html:report.html")
+}
 
 dependencies {
     implementation(kotlin("stdlib"))
